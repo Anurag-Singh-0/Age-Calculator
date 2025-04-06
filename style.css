@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  padding: 10rem 10rem;
+  user-select: none;
+  position: relative;
+}
+
+.title img {
+  height: 6rem;
+  border-radius: 3rem;
+  border: 1px solid #0000005b;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.input-box {
+  max-width: 500px;
+  width: 100%;
+  height: 6rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 10px 10px 30px #00000031;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 0.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.input-box input {
+  width: 100%;
+  height: 3rem;
+  padding: 1rem;
+  outline: 0;
+  border: 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  position: relative;
+}
+
+.input-box input[type="date"]::-webkit-calendar-picker-indicator {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  position: absolute;
+  background-position: calc(100% - 10px);
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.input-box button {
+  background-color: #222831;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.container p {
+  user-select: all;
+  font-size: 1.5rem;
+  margin-left: 0.2rem;
+  font-weight: 500;
+}
+
+#result {
+  font-size: 1.8rem;
+  font-weight: 400;
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    padding-top: 5rem;
+  }
+
+  .title h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    width: 100%;
+  }
+
+  .title img {
+    height: 4rem;
+  }
+
+  .input-box {
+    height: 4rem;
+    margin: 1rem 0;
+  }
+
+  .input-box input {
+    height: 2rem;
+    font-size: 0.7rem;
+  }
+
+  .input-box #calBtn {
+    font-size: 0.6rem;
+  }
+
+  #result {
+    max-width: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    font-size: 0.8rem;
+  }
+}
